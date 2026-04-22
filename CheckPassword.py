@@ -18,8 +18,8 @@ def check_password(password: str) -> bool:
     return small_letter and capital_letter and number
 
 
-dir = os.path.dirname(__file__)
-with open(dir + "/passwords.txt", 'r') as file:
-    for line in file:
-        if check_password(line):
-            print(line, end = "")
+dir = os.path.dirname(__file__)                     # Nacita cestu k suboru
+with open(dir + "/passwords.txt", 'r') as file:     # Otvori subor s heslami
+    for password in file:                           # Prejde vsetky riadky/hesla
+        if check_password(password):                # Skontroluje ich
+            print(password, end = "")
