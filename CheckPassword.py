@@ -1,3 +1,5 @@
+# sem doplnte link na svoj kod
+
 import os;
 
 def check_password(password: str) -> bool:    
